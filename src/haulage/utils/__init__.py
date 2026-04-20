@@ -1,0 +1,1 @@
+"""Utilities: linalg, formula, validation."""

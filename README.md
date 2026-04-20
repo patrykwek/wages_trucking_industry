@@ -1,0 +1,5 @@
+# wages_trucking_industry
+
+A Python package (`haulage`) for causal analysis of U.S. trucking deregulation on driver wages, hours, and employment. Provides OLS with a full standard-error toolkit (HC0 through HC3, one- and two-way cluster-robust via Liang-Zeger / Cameron-Gelbach-Miller, Newey-West HAC with Bartlett, Parzen, and Quadratic-Spectral kernels plus Andrews (1991) bandwidth, Driscoll-Kraay panel HAC, wild cluster bootstrap-t with Rademacher, Mammen, and Webb weights), a staggered DiD stack (two-way fixed effects, Goodman-Bacon 2021 decomposition, Callaway-Sant'Anna 2021 group-time ATTs with DR / IPW / OR estimation and event-study aggregation), typed estimand and assumption primitives, influence-function-based inference, and a live-API data pipeline (IPUMS CPS, BLS OES / CES, FRED, FMCSA, FHWA, CBP) with a seeded synthetic panel for offline use.
+
+Install with `pip install -e ".[dev]"`. Run `pytest` for the 26-test suite, `mypy --strict src/haulage` for type-checking, and `ruff check src tests` for lint. Python 3.11+.
